@@ -1,6 +1,6 @@
-# ✅ Finished Project - Secure Health API
+# Finished Project - Secure Health API
 
-## 📝 Deskripsi
+## Deskripsi
 
 Complete implementation Secure Health E-Commerce API dengan JWT authentication, RBAC, dan OWASP mitigations.
 
@@ -12,21 +12,21 @@ Complete implementation Secure Health E-Commerce API dengan JWT authentication, 
 
 Project ini adalah **evolution** dari API di Modul 3, sekarang dengan complete security!
 
-## 🎯 Fitur Lengkap
+## Fitur Lengkap
 
-- ✅ JWT authentication (register, login, verify)
-- ✅ Password hashing dengan bcrypt (salt rounds 10)
-- ✅ RBAC dengan User dan Admin roles
-- ✅ Protected routes dengan auth middleware
-- ✅ Input validation dengan express-validator
-- ✅ Security headers dengan Helmet
-- ✅ Rate limiting (5 login attempts per 15 min)
-- ✅ MongoDB injection prevention
-- ✅ XSS protection dengan sanitization
-- ✅ CORS configured
-- ✅ Error handling yang secure
+- JWT authentication (register, login, verify)
+- Password hashing dengan bcrypt (salt rounds 10)
+- RBAC dengan User dan Admin roles
+- Protected routes dengan auth middleware
+- Input validation dengan express-validator
+- Security headers dengan Helmet
+- Rate limiting (5 login attempts per 15 min)
+- MongoDB injection prevention
+- XSS protection dengan sanitization
+- CORS configured
+- Error handling yang secure
 
-## 📚 Pembelajaran Kunci
+## Pembelajaran Kunci
 
 ### Security Features Implemented:
 
@@ -59,7 +59,7 @@ Project ini adalah **evolution** dari API di Modul 3, sekarang dengan complete s
    - Proper status codes
    - Logging untuk debugging (not exposing)
 
-## 🧪 Testing
+## Testing
 
 Use Postman collection atau curl:
 
@@ -79,6 +79,6 @@ curl http://localhost:3000/api/auth/profile \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
-**Selamat belajar! 🔐🚀**
+**Selamat belajar! **
 
 _Disusun oleh Pusbang Talenta Digital_

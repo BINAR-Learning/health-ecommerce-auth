@@ -1,4 +1,4 @@
-# 🔐 health-ecommerce-auth
+# health-ecommerce-auth
 
 > **JWT Authentication & Secure Coding untuk Health E-Commerce**
 
@@ -12,14 +12,14 @@ Complete authentication & security layer untuk Health E-Commerce dengan JWT, RBA
 
 ---
 
-## 📦 Apa yang Ada di Repository Ini?
+## Apa yang Ada di Repository Ini?
 
 Repository ini berisi **2 versi project**:
 
 ```
 health-ecommerce-auth/
 ├── README.md (Ini file yang kamu baca)
-├── starter-project/     # 📝 Untuk practice (dengan TODO)
+├── starter-project/     #  Untuk practice (dengan TODO)
 │   ├── README.md
 │   ├── package.json
 │   ├── server.js
@@ -28,7 +28,7 @@ health-ecommerce-auth/
 │   ├── middleware/ (with TODOs)
 │   ├── models/
 │   └── routes/
-└── finished-project/    # ✅ Complete auth system
+└── finished-project/    #  Complete auth system
     ├── README.md
     ├── package.json
     ├── server.js
@@ -46,7 +46,7 @@ health-ecommerce-auth/
 
 ---
 
-## 🚀 Quick Start (Untuk Newbie)
+## Quick Start (Untuk Newbie)
 
 ### Option 1: Practice dengan Starter Project
 
@@ -110,18 +110,18 @@ npm run dev
 
 ---
 
-## 🎯 Apa yang Akan Kamu Pelajari?
+## Apa yang Akan Kamu Pelajari?
 
 **Modul 4** melanjutkan dari Modul 3 (API) dengan menambahkan **security layer**!
 
 ### Konsep yang Dipelajari:
 
-- ✅ **JWT Authentication** - Stateless auth dengan tokens
-- ✅ **Password Security** - Bcrypt hashing dengan salt rounds
-- ✅ **RBAC** - Role-Based Access Control (Admin vs User)
-- ✅ **OWASP Top 10** - Security vulnerabilities & prevention
-- ✅ **Input Validation** - Prevent injection attacks
-- ✅ **Rate Limiting** - Prevent brute force attacks
+- **JWT Authentication** - Stateless auth dengan tokens
+- **Password Security** - Bcrypt hashing dengan salt rounds
+- **RBAC** - Role-Based Access Control (Admin vs User)
+- **OWASP Top 10** - Security vulnerabilities & prevention
+- **Input Validation** - Prevent injection attacks
+- **Rate Limiting** - Prevent brute force attacks
 
 ### Apa yang Dibangun:
 
@@ -134,26 +134,26 @@ npm run dev
 
 ---
 
-## 📁 Struktur Starter Project
+## Struktur Starter Project
 
 ```
 starter-project/
 ├── README.md              # Setup guide
 ├── package.json           # Dependencies (JWT, bcrypt, helmet)
-├── server.js             # ⚠️ TODO: Add security middleware
+├── server.js             #  TODO: Add security middleware
 ├── config/
-│   └── database.js       # ✅ MongoDB connection (ready!)
+│   └── database.js       #  MongoDB connection (ready!)
 ├── controllers/
-│   └── authController.js # ⚠️ TODO: Register, login, profile
+│   └── authController.js #  TODO: Register, login, profile
 ├── middleware/
-│   ├── auth.js           # ⚠️ TODO: JWT verification
-│   ├── authorize.js      # ⚠️ TODO: RBAC implementation
-│   └── errorHandler.js   # ✅ Error handler (ready!)
+│   ├── auth.js           #  TODO: JWT verification
+│   ├── authorize.js      #  TODO: RBAC implementation
+│   └── errorHandler.js   #  Error handler (ready!)
 ├── models/
-│   ├── User.js           # ⚠️ TODO: User schema dengan password hashing
-│   └── Product.js        # ✅ From Modul 2 (ready!)
+│   ├── User.js           #  TODO: User schema dengan password hashing
+│   └── Product.js        #  From Modul 2 (ready!)
 └── routes/
-    └── authRoutes.js     # ⚠️ TODO: Auth endpoints
+    └── authRoutes.js     #  TODO: Auth endpoints
 ```
 
 **TODOs:**
@@ -167,42 +167,42 @@ starter-project/
 
 ---
 
-## 📁 Struktur Finished Project
+## Struktur Finished Project
 
 ```
 finished-project/
 ├── README.md              # Complete guide + security notes
 ├── package.json           # All security dependencies
-├── server.js             # ✅ Complete dengan Helmet, rate limiting
+├── server.js             #  Complete dengan Helmet, rate limiting
 ├── config/
-│   └── database.js       # ✅ MongoDB connection
+│   └── database.js       #  MongoDB connection
 ├── controllers/
-│   └── authController.js # ✅ Register, login, profile (complete!)
+│   └── authController.js #  Register, login, profile (complete!)
 ├── middleware/
-│   ├── auth.js           # ✅ JWT authentication middleware
-│   ├── authorize.js      # ✅ RBAC middleware
-│   └── errorHandler.js   # ✅ Global error handler
+│   ├── auth.js           #  JWT authentication middleware
+│   ├── authorize.js      #  RBAC middleware
+│   └── errorHandler.js   #  Global error handler
 ├── models/
-│   ├── User.js           # ✅ Bcrypt hashing implemented
-│   └── Product.js        # ✅ From Modul 2
+│   ├── User.js           #  Bcrypt hashing implemented
+│   └── Product.js        #  From Modul 2
 └── routes/
-    ├── authRoutes.js     # ✅ /register, /login, /profile
-    └── productRoutes.js  # ✅ Protected with JWT & RBAC
+    ├── authRoutes.js     #  /register, /login, /profile
+    └── productRoutes.js  #  Protected with JWT & RBAC
 ```
 
 **All implemented:**
 
-- ✅ JWT authentication (stateless)
-- ✅ Password hashing (bcrypt salt 10)
-- ✅ RBAC (admin vs user roles)
-- ✅ Security headers (Helmet)
-- ✅ Rate limiting (5 login attempts/15min)
-- ✅ Input validation
-- ✅ XSS & injection prevention
+- JWT authentication (stateless)
+- Password hashing (bcrypt salt 10)
+- RBAC (admin vs user roles)
+- Security headers (Helmet)
+- Rate limiting (5 login attempts/15min)
+- Input validation
+- XSS & injection prevention
 
 ---
 
-## 🧪 Testing Auth Endpoints
+## Testing Auth Endpoints
 
 ### 1. Register User:
 
@@ -278,29 +278,29 @@ Content-Type: application/json
 
 ---
 
-## 🔗 Hubungan dengan Modul Lain
+## Hubungan dengan Modul Lain
 
 **Dari Modul 1 (OOP):**
 
-- ✅ Class patterns untuk service layer
+- Class patterns untuk service layer
 
 **Dari Modul 2 (Database):**
 
-- ✅ User model dari Modul 2
-- ✅ Product model untuk authorization examples
+- User model dari Modul 2
+- Product model untuk authorization examples
 
 **Dari Modul 3 (Express):**
 
-- ✅ Express server & routes
-- ✅ Middleware chain
-- ✅ Error handling
+- Express server & routes
+- Middleware chain
+- Error handling
 
 **Modul 4 (This!)** → Adds Security
 
-- 🆕 JWT authentication
-- 🆕 Password hashing
-- 🆕 RBAC authorization
-- 🆕 OWASP security measures
+- JWT authentication
+- Password hashing
+- RBAC authorization
+- OWASP security measures
 
 **Ke Modul 5 (Integration):**
 
@@ -312,9 +312,9 @@ Content-Type: application/json
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
-### ❌ "JsonWebTokenError: jwt malformed"
+### "JsonWebTokenError: jwt malformed"
 
 **Solusi:**
 
@@ -324,7 +324,7 @@ Content-Type: application/json
 # (with space after "Bearer")
 ```
 
-### ❌ "ValidationError: Password required"
+### "ValidationError: Password required"
 
 **Solusi:**
 
@@ -332,7 +332,7 @@ Content-Type: application/json
 - Include numbers & letters
 - Check password confirmation match
 
-### ❌ "Too many login attempts"
+### "Too many login attempts"
 
 **Solusi:**
 
@@ -340,7 +340,7 @@ Content-Type: application/json
 - Wait 15 minutes
 - Or increase limit in development
 
-### ❌ "Forbidden: Access denied"
+### "Forbidden: Access denied"
 
 **Solusi:**
 
@@ -350,19 +350,19 @@ Content-Type: application/json
 
 ---
 
-## 💡 Security Best Practices Implemented
+## Security Best Practices Implemented
 
-1. ✅ **Never store plain passwords** - Always hash dengan bcrypt
-2. ✅ **Use strong JWT secrets** - Min 32 characters, random
-3. ✅ **Validate all inputs** - Prevent injection attacks
-4. ✅ **Rate limit auth endpoints** - Prevent brute force
-5. ✅ **Use HTTPS in production** - Never send tokens over HTTP
-6. ✅ **Set token expiration** - Tokens expire after 24h
-7. ✅ **Sanitize inputs** - Remove malicious code
+1.  **Never store plain passwords** - Always hash dengan bcrypt
+2.  **Use strong JWT secrets** - Min 32 characters, random
+3.  **Validate all inputs** - Prevent injection attacks
+4.  **Rate limit auth endpoints** - Prevent brute force
+5.  **Use HTTPS in production** - Never send tokens over HTTP
+6.  **Set token expiration** - Tokens expire after 24h
+7.  **Sanitize inputs** - Remove malicious code
 
 ---
 
-## 📚 Resources
+## Resources
 
 **Documentation:**
 
@@ -378,25 +378,25 @@ Content-Type: application/json
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 
 After completing this module:
 
-1. ✅ **Test auth flow** - Register → Login → Access protected route
-2. ✅ **Verify RBAC** - Test admin vs user permissions
-3. ➡️ **Modul 5** - Add external integrations (AI, Payment)
-4. ➡️ **Frontend Modules** - Connect React app dengan auth API
+1.  **Test auth flow** - Register → Login → Access protected route
+2.  **Verify RBAC** - Test admin vs user permissions
+3.  **Modul 5** - Add external integrations (AI, Payment)
+4.  **Frontend Modules** - Connect React app dengan auth API
 
 ---
 
-**Happy Securing! 🔐**
+**Happy Securing! **
 
 _Modul 4 - Authentication & Secure Coding_  
 _Part of Health E-Commerce Backend Series_
 
 ---
 
-**📁 Repository Info:**
+** Repository Info:**
 
 - **Name:** `health-ecommerce-auth`
 - **Type:** Authentication & Security Layer

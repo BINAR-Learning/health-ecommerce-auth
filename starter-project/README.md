@@ -1,6 +1,6 @@
-# 🏁 Starter Project - Secure Health API
+# Starter Project - Secure Health API
 
-## 📝 Deskripsi
+## Deskripsi
 
 Starter project untuk latihan Authentication & Security dalam konteks **Health E-Commerce API**.
 
@@ -15,9 +15,9 @@ Structure server sudah ada dari Modul 3, sekarang kamu tambahkan auth layer!
 
 Lengkapi implementasi JWT auth, password hashing, RBAC, dan security best practices.
 
-## 🎯 Tugas
+## Tugas
 
-### ⚠️ 1. Lengkapi `models/User.js`
+### 1. Lengkapi `models/User.js`
 
 Buat User schema dengan:
 
@@ -26,7 +26,7 @@ Buat User schema dengan:
 - Instance method `comparePassword(candidatePassword)`
 - Timestamps
 
-### ⚠️ 2. Lengkapi `middleware/auth.js`
+### 2. Lengkapi `middleware/auth.js`
 
 Implement JWT middleware:
 
@@ -36,7 +36,7 @@ Implement JWT middleware:
 - Attach decoded user ke req.user
 - Handle expired dan invalid tokens
 
-### ⚠️ 3. Lengkapi `middleware/authorize.js`
+### 3. Lengkapi `middleware/authorize.js`
 
 Implement RBAC:
 
@@ -44,7 +44,7 @@ Implement RBAC:
 - Return 403 kalau role not allowed
 - Support multiple roles
 
-### ⚠️ 4. Lengkapi `middleware/validate.js`
+### 4. Lengkapi `middleware/validate.js`
 
 Input validation rules:
 
@@ -52,7 +52,7 @@ Input validation rules:
 - `loginValidation` - email, password
 - Use express-validator
 
-### ⚠️ 5. Lengkapi `controllers/authController.js`
+### 5. Lengkapi `controllers/authController.js`
 
 Auth functions:
 
@@ -61,7 +61,7 @@ Auth functions:
 - `getProfile(req, res)` - Get current user info
 - `updatePassword(req, res)` - Change password
 
-### ⚠️ 6. Lengkapi `routes/authRoutes.js`
+### 6. Lengkapi `routes/authRoutes.js`
 
 Routes:
 
@@ -70,7 +70,7 @@ Routes:
 - GET `/profile` - protected (require auth)
 - PUT `/password` - protected
 
-### ⚠️ 7. Lengkapi `server.js`
+### 7. Lengkapi `server.js`
 
 Setup secure server:
 
@@ -79,7 +79,7 @@ Setup secure server:
 - Rate limiting
 - Error handler yang nggak expose details
 
-## 🧪 Testing
+## Testing
 
 Use Postman:
 
@@ -90,4 +90,4 @@ Use Postman:
 5. Try invalid tokens
 6. Test rate limiting (login 6x cepat)
 
-**Selamat mengerjakan! 🔐🚀**
+**Selamat mengerjakan! **

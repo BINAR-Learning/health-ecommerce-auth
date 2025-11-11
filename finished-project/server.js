@@ -119,15 +119,15 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`
   ╔════════════════════════════════════════════╗
-  ║  🔐 Secure Health API running on port ${PORT}  ║
-  ║  🏥 Health: http://localhost:${PORT}/health      ║
-  ║  🔑 Auth: http://localhost:${PORT}/api/auth      ║
+  ║   Secure Health API running on port ${PORT}  ║
+  ║   Health: http://localhost:${PORT}/health      ║
+  ║   Auth: http://localhost:${PORT}/api/auth      ║
   ╚════════════════════════════════════════════╝
   `);
 });
 
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err) => {
-  console.error("❌ Unhandled Promise Rejection:", err);
+  console.error(" Unhandled Promise Rejection:", err);
   process.exit(1);
 });
