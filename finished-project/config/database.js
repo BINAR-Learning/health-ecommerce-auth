@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 /**
  * Database Connection
- * File ini sudah lengkap - tidak perlu dimodifikasi
+ * Handles MongoDB connection with proper error handling
  */
 
 const connectDB = async () => {

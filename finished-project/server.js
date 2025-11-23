@@ -13,9 +13,14 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const mongoSanitize = require("mongo-sanitize");
 const morgan = require("morgan");
+const swaggerUi = require("swagger-ui-express");
+const YAML = require("yamljs");
 
 const connectDB = require("./config/database");
 const authRoutes = require("./routes/authRoutes");
+
+// Load Swagger documentation
+const swaggerDocument = YAML.load("./swagger.yaml");
 
 // Initialize Express
 const app = express();
@@ -73,14 +78,7 @@ const loginLimiter = rateLimit({
   skipSuccessfulRequests: true,
 });
 
-// Apply rate limiters
-app.use("/api/", apiLimiter);
-app.use("/api/auth/login", loginLimiter);
-
-// Routes
-app.use("/api/auth", authRoutes);
-
-// Health check
+// Health check (before rate limiter)
 app.get("/health", (req, res) => {
   res.json({
     success: true,
@@ -88,6 +86,23 @@ app.get("/health", (req, res) => {
     timestamp: new Date().toISOString(),
   });
 });
+
+// Swagger API Documentation (before rate limiter)
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocument, {
+    customSiteTitle: "Secure Health API Docs",
+    customCss: ".swagger-ui .topbar { display: none }",
+  })
+);
+
+// Apply rate limiters
+app.use("/api/", apiLimiter);
+app.use("/api/auth/login", loginLimiter);
+
+// Routes
+app.use("/api/auth", authRoutes);
 
 // 404 handler
 app.use((req, res) => {
@@ -117,17 +132,14 @@ app.use((err, req, res, next) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`
-  ╔════════════════════════════════════════════╗
-  ║   Secure Health API running on port ${PORT}  ║
-  ║   Health: http://localhost:${PORT}/health      ║
-  ║   Auth: http://localhost:${PORT}/api/auth      ║
-  ╚════════════════════════════════════════════╝
-  `);
+  console.log(`Secure Health API running on port ${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/health`);
+  console.log(`Auth endpoints: http://localhost:${PORT}/api/auth`);
+  console.log(`API Documentation: http://localhost:${PORT}/api-docs`);
 });
 
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err) => {
-  console.error(" Unhandled Promise Rejection:", err);
+  console.error("Unhandled Promise Rejection:", err);
   process.exit(1);
 });

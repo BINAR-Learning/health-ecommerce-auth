@@ -71,8 +71,8 @@ cp .env.example .env
 # JWT_SECRET=your-super-secret-key-min-32-characters
 # MONGODB_URI=mongodb://localhost:27017/health-ecommerce
 
-# 7. Start MongoDB
-mongod
+# 7. Pastikan MongoDB Running
+# Cek dengan MongoDB Compass atau mongosh
 
 # 8. Start server
 npm run dev
@@ -99,8 +99,8 @@ npm install
 cp .env.example .env
 # Edit dengan JWT_SECRET yang strong
 
-# 6. Start MongoDB
-mongod
+# 6. Pastikan MongoDB Running
+# Cek dengan MongoDB Compass atau mongosh
 
 # 7. Start server
 npm run dev
@@ -202,7 +202,86 @@ finished-project/
 
 ---
 
-## Testing Auth Endpoints
+## API Documentation
+
+### Option 1: Swagger UI (Interactive Documentation)
+
+Kedua project (starter & finished) sudah include **Swagger/OpenAPI documentation**!
+
+**Cara menggunakan:**
+
+1. Start server:
+
+   ```bash
+   npm run dev
+   ```
+
+2. Buka browser ke: **http://localhost:5000/api-docs**
+
+3. Test endpoints langsung dari browser:
+
+   - Click endpoint yang mau di-test
+   - Click "Try it out"
+   - Isi request body
+   - Click "Execute"
+
+4. **Untuk endpoints yang protected (require token):**
+   - Klik tombol **"Authorize"** di pojok kanan atas
+   - Format: `Bearer YOUR_TOKEN_HERE` (ada spasi setelah Bearer)
+   - Click "Authorize"
+   - Sekarang semua protected endpoints bisa di-test!
+
+**Token dari mana?**
+
+- Register atau Login dulu
+- Copy token dari response
+- Paste di Authorize dialog
+
+### Option 2: Postman Collection (Reusable Tests)
+
+Postman collection sudah tersedia di: `Secure-Health-API-Auth.postman_collection.json`
+
+**Cara import & menggunakan:**
+
+1. **Import collection:**
+
+   - Buka Postman
+   - Click **Import**
+   - Drag & drop file `Secure-Health-API-Auth.postman_collection.json`
+   - Collection muncul di sidebar
+
+2. **Set base URL:**
+
+   - Click collection name → Variables tab
+   - Set `baseUrl` = `http://localhost:5000`
+   - Click Save
+
+3. **Test flow authentication:**
+   - Start dari **"Register User"** request
+   - Click Send
+   - Token **auto-saved** ke variable `{{authToken}}`!
+4. **Token otomatis digunakan:**
+
+   - Request "Get Profile" sudah pakai `{{authToken}}` otomatis
+   - Request "Update Password" juga otomatis authenticated
+   - Tidak perlu copy-paste token manual!
+
+5. **Test scripts otomatis:**
+   - Setiap request punya test validation
+   - Lihat tab "Test Results" setelah send
+   - Green = Pass, Red = Fail
+
+**Postman collection includes:**
+
+- 9 pre-configured requests
+- Auto token management
+- Automated test scripts
+- Error case examples
+- Validation examples
+
+---
+
+## Testing Auth Endpoints (Manual)
 
 ### 1. Register User:
 
