@@ -1,4 +1,4 @@
-# komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth
+# komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth
 
 > **JWT Authentication & Secure Coding untuk Health E-Commerce**
 
@@ -17,7 +17,7 @@ Complete authentication & security layer untuk Health E-Commerce dengan JWT, RBA
 Repository ini berisi **2 versi project**:
 
 ```
-komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth/
+komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth/
 ├── README.md (Ini file yang kamu baca)
 ├── starter-project/     #  Untuk practice (dengan TODO)
 │   ├── README.md
@@ -52,10 +52,10 @@ komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth/
 
 ```bash
 # 1. Clone repository ini
-git clone https://github.com/your-username/komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth.git
+git clone https://github.com/your-username/komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth.git
 
 # 2. Masuk ke folder repository
-cd komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth
+cd komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth
 
 # 3. Masuk ke starter-project
 cd starter-project
@@ -89,10 +89,10 @@ npm run dev
 
 ```bash
 # 1. Clone repository (jika belum)
-git clone https://github.com/your-username/komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth.git
+git clone https://github.com/your-username/komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth.git
 
 # 2. Masuk ke folder repository
-cd komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth
+cd komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth
 
 # 3. Masuk ke finished-project
 cd finished-project
@@ -482,6 +482,6 @@ _Part of Health E-Commerce Backend Series_
 
 ** Repository Info:**
 
-- **Name:** `komdigi-fsd-intermediate-modul-3-backend-health-ecommerce-auth`
+- **Name:** `komdigi-fsd-intermediate-modul-4-backend-health-ecommerce-auth`
 - **Type:** Authentication & Security Layer
 - **Structure:** 1 Repo, 2 Folders (starter + finished)
